@@ -1,0 +1,4 @@
+Write-Host "Hello Kanaiza"
+Get-WmiObject -Class Win32_OperartingSystem ComputerName localost |
+Sect-Object -Property CSName,@{n-"last booted";
+e={[Management.ManagementDateTimeConverter]::ToDateTime($_.LastBootUpTime)}}
